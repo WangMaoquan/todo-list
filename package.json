@@ -1,0 +1,50 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "pnpm i",
+    "dev:fe": "pnpm -F frontend dev",
+    "dev:be": "pnpm -F backend start:dev",
+    "build:fe": "pnpm -F frontend build",
+    "build": "turbo build check-types",
+    "test": "pnpm -F frontend test && pnpm -F backend test && pnpm -F backend test:e2e",
+    "prepare": "simple-git-hooks",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.1",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@types/node": "^18.13.0",
+    "eslint": "^8.33.0",
+    "lint-staged": "^13.1.1",
+    "simple-git-hooks": "^2.8.1",
+    "taze": "^0.8.5",
+    "turbo": "^2.3.3",
+    "typescript": "^4.9.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged",
+    "commit-msg": "pnpm exec commitlint --edit \"${1}\""
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md,jsx,tsx,vue,yml,yaml}": [
+      "eslint --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "packageManager": "pnpm@9.12.0"
+}
