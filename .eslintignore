@@ -1,4 +1,5 @@
 dist
 node_modules
-**/*.yml
-**/*.yaml
+*.yml
+*.yaml
+package.json
