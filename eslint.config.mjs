@@ -2,6 +2,7 @@ import pluginJs from '@eslint/js';
 import pluginVue from 'eslint-plugin-vue';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
@@ -30,7 +31,8 @@ export default [
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      semi: 'error',
+      'semi': 'error',
     },
   },
+  eslintPluginPrettierRecommended,
 ];
