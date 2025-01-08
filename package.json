@@ -1,7 +1,11 @@
 {
   "name": "todo-list",
   "version": "1.0.0",
+  "packageManager": "pnpm@9.12.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "bootstrap": "pnpm i",
@@ -14,20 +18,19 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@antfu/eslint-config": "^0.34.1",
+    "@antfu/eslint-config": "^3.12.1",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@types/node": "^18.13.0",
-    "eslint": "^8.33.0",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint": "^9.17.0",
     "lint-staged": "^13.1.1",
     "simple-git-hooks": "^2.8.1",
     "taze": "^0.8.5",
     "turbo": "^2.3.3",
-    "typescript": "^4.9.5"
+    "typescript": "^5.7.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
@@ -46,5 +49,10 @@
       "@commitlint/config-conventional"
     ]
   },
-  "packageManager": "pnpm@9.12.0"
+  "dependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.19.1"
+  }
 }
