@@ -10,7 +10,6 @@ export class AppTestService {
     @InjectModel(AppTest.name) private projectModel: Model<AppTest>,
   ) {}
   create(createAppTestDto: CreateAppTestDto): Promise<AppTest> {
-    console.log(createAppTestDto, 'create');
     const createdTask = new this.projectModel(createAppTestDto);
     return createdTask.save();
   }
