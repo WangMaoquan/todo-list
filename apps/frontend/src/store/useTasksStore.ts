@@ -11,23 +11,9 @@ import {
   fetchUpdateTaskPosition,
   fetchUpdateTaskTitle,
 } from '@/api';
-import { TasksSelectorType, useTasksSelectorStore } from '@/store';
+import { useTasksSelectorStore } from '@/store/useTasksSelectorStore';
 import type { TaskResponse } from '@/api/types';
-
-export enum TaskStatus {
-  ACTIVE = 'active',
-  COMPLETED = 'completed',
-  REMOVED = 'removed',
-}
-
-export interface Task {
-  id: string;
-  title: string;
-  status: TaskStatus;
-  content: string;
-  projectId: string;
-  position: number;
-}
+import { TasksSelectorType, TaskStatus, type Task } from '@/types/task.d';
 
 export const useTasksStore = defineStore('tasksStore', () => {
   const tasksSelectorStore = useTasksSelectorStore();

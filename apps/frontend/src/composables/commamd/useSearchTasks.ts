@@ -1,12 +1,10 @@
+import type { FuseResult } from 'fuse.js';
 import Fuse from 'fuse.js';
 import { ref } from 'vue';
-import {
-  TaskStatus,
-  completeSmartProject,
-  useListProjectsStore,
-  useTasksStore,
-} from '@/store';
-import type { TasksSelector } from '@/store';
+import { useTasksStore } from '@/store/useTasksStore';
+import { completeSmartProject } from '@/store/useSmartProjects';
+import { useListProjectsStore } from '@/store/useListProjectsStore';
+import { TaskStatus, type TasksSelector } from '@/types/task.d';
 
 interface SearchTaskItem {
   id: string;
@@ -16,7 +14,7 @@ interface SearchTaskItem {
   from: TasksSelector | undefined;
 }
 
-const filteredTasks = ref<Fuse.FuseResult<SearchTaskItem>[]>([]);
+const filteredTasks = ref<FuseResult<SearchTaskItem>[]>([]);
 const fuse = new Fuse([] as SearchTaskItem[], {
   keys: ['title', 'desc'],
 });

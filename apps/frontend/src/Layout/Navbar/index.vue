@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NDropdown, NPopover } from 'naive-ui';
 import type { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface';
-import { useCommandModal } from '@/components/command/commandModal';
+import { useCommandModal } from '@/composables/commamd/useCommandModal';
 import Command from '@/components/command/CommandModal.vue';
 import { useGoto } from '@/composables/goto';
 

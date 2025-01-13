@@ -2,12 +2,17 @@
 import { NConfigProvider } from 'naive-ui';
 import { useRoute } from 'vue-router';
 import Layout from './Layout/index.vue';
+import { useThemeStore } from '@/store/useThemeStore';
+import { useCommand } from '@/composables/commamd';
 
 const route = useRoute();
+const themeStore = useThemeStore();
+const { initCommands } = useCommand();
+initCommands();
 </script>
 
 <template>
-  <NConfigProvider>
+  <NConfigProvider :theme="themeStore.naiveTheme">
     <Layout v-if="route.meta.layout !== false">
       <RouterView />
     </Layout>

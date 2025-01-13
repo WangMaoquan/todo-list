@@ -4,6 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import { RouteNames } from './const';
 import Task from '@/components/Task/index.vue';
 import Login from '@/components/Login/index.vue';
+import { SettingsRoute } from './settings';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -27,6 +28,7 @@ export const routes: RouteRecordRaw[] = [
       layout: false,
     },
   },
+  SettingsRoute,
 ];
 
 export function setupRouterGuard(router: Router) {

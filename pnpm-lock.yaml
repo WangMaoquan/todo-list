@@ -163,57 +163,18 @@ importers:
 
   apps/frontend:
     dependencies:
-      '@iconify-json/carbon':
-        specifier: ^1.2.5
-        version: 1.2.5
-      '@iconify-json/mdi':
-        specifier: ^1.2.2
-        version: 1.2.2
-      '@iconify/vue':
-        specifier: ^4.3.0
-        version: 4.3.0(vue@3.5.13(typescript@5.6.3))
       '@imengyu/vue3-context-menu':
         specifier: ^1.4.4
         version: 1.4.4
-      '@pinia/testing':
-        specifier: ^0.1.7
-        version: 0.1.7(pinia@2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
-      '@types/lodash-es':
-        specifier: ^4.17.12
-        version: 4.17.12
-      '@unocss/reset':
-        specifier: ^65.4.0
-        version: 65.4.0
-      '@vitejs/plugin-vue-jsx':
-        specifier: ^4.1.1
-        version: 4.1.1(vite@6.0.7(@types/node@20.17.12)(jiti@2.4.2)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
-      '@vitest/coverage-c8':
-        specifier: ^0.33.0
-        version: 0.33.0(vitest@2.1.8(@types/node@20.17.12)(happy-dom@16.5.3)(terser@5.37.0))
-      '@vue/test-utils':
-        specifier: ^2.4.6
-        version: 2.4.6
-      '@vueuse/core':
-        specifier: ^12.4.0
-        version: 12.4.0(typescript@5.6.3)
       axios:
         specifier: ^1.7.9
         version: 1.7.9
-      axios-mock-adapter:
-        specifier: ^2.1.0
-        version: 2.1.0(axios@1.7.9)
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
       dexie:
         specifier: ^4.0.10
         version: 4.0.10
       fuse.js:
         specifier: ^7.0.0
         version: 7.0.0
-      happy-dom:
-        specifier: ^16.5.3
-        version: 16.5.3
       ink-mde:
         specifier: ^0.34.0
         version: 0.34.0(vue@3.5.13(typescript@5.6.3))
@@ -226,9 +187,6 @@ importers:
       pinia:
         specifier: ^2.3.0
         version: 2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
-      unocss:
-        specifier: ^65.4.0
-        version: 65.4.0(postcss@8.4.49)(rollup@4.30.0)(vite@6.0.7(@types/node@20.17.12)(jiti@2.4.2)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@20.17.12)(happy-dom@16.5.3)(terser@5.37.0)
@@ -238,28 +196,70 @@ importers:
       vue-router:
         specifier: ^4.5.0
         version: 4.5.0(vue@3.5.13(typescript@5.6.3))
-      vue-router-mock:
-        specifier: ^1.1.0
-        version: 1.1.0(vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
       vue3-emoji-picker:
         specifier: ^1.1.8
         version: 1.1.8(typescript@5.6.3)
       vuedraggable:
-        specifier: ^2.24.3
-        version: 2.24.3
+        specifier: 4.1.0
+        version: 4.1.0(vue@3.5.13(typescript@5.6.3))
     devDependencies:
+      '@iconify-json/carbon':
+        specifier: ^1.2.5
+        version: 1.2.5
+      '@iconify-json/mdi':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@iconify/vue':
+        specifier: ^4.3.0
+        version: 4.3.0(vue@3.5.13(typescript@5.6.3))
+      '@pinia/testing':
+        specifier: ^0.1.7
+        version: 0.1.7(pinia@2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
+      '@unocss/reset':
+        specifier: ^65.4.0
+        version: 65.4.0
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@6.0.7(@types/node@20.17.12)(jiti@2.4.2)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
+      '@vitejs/plugin-vue-jsx':
+        specifier: ^4.1.1
+        version: 4.1.1(vite@6.0.7(@types/node@20.17.12)(jiti@2.4.2)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
+      '@vitest/coverage-c8':
+        specifier: ^0.33.0
+        version: 0.33.0(vitest@2.1.8(@types/node@20.17.12)(happy-dom@16.5.3)(terser@5.37.0))
+      '@vue/test-utils':
+        specifier: ^2.4.6
+        version: 2.4.6
       '@vue/tsconfig':
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      '@vueuse/core':
+        specifier: ^12.4.0
+        version: 12.4.0(typescript@5.6.3)
+      axios-mock-adapter:
+        specifier: ^2.1.0
+        version: 2.1.0(axios@1.7.9)
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      happy-dom:
+        specifier: ^16.5.3
+        version: 16.5.3
       typescript:
         specifier: ~5.6.2
         version: 5.6.3
+      unocss:
+        specifier: ^65.4.0
+        version: 65.4.0(postcss@8.4.49)(rollup@4.30.0)(vite@6.0.7(@types/node@20.17.12)(jiti@2.4.2)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
       vite:
         specifier: ^6.0.5
         version: 6.0.7(@types/node@20.17.12)(jiti@2.4.2)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
+      vue-router-mock:
+        specifier: ^1.1.0
+        version: 1.1.0(vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
       vue-tsc:
         specifier: ^2.2.0
         version: 2.2.0(typescript@5.6.3)
@@ -348,10 +348,6 @@ packages:
 
   '@babel/helper-optimise-call-expression@7.25.9':
     resolution: {integrity: sha512-FIpuNaz5ow8VyrYcnXQTDRGvV6tTjkNtCK/RYNDXGSLlUD6cBuQTSw43CShGxjvfBTfcUA/r6UhUCbtYqkhcuQ==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-plugin-utils@7.25.9':
-    resolution: {integrity: sha512-kSMlyUVdWe25rEsRGviIgOWnoT/nfABVWlqt9N19/dIPWViAOW2s9wznP5tURbs/IDuNk4gPy3YdYRgH3uxhBw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-plugin-utils@7.26.5':
@@ -5024,8 +5020,8 @@ packages:
   solid-js@1.9.4:
     resolution: {integrity: sha512-ipQl8FJ31bFUoBNScDQTG3BjN6+9Rg+Q+f10bUbnO6EOTTf5NGerJeHc7wyu5I4RMHEl/WwZwUmy/PTRgxxZ8g==}
 
-  sortablejs@1.10.2:
-    resolution: {integrity: sha512-YkPGufevysvfwn5rfdlGyrGjt7/CRHwvRPogD/lC+TnvcN29jDpCifKP+rBqf+LRldfXSTh+0CGLcSg0VIxq3A==}
+  sortablejs@1.14.0:
+    resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -5704,8 +5700,10 @@ packages:
       typescript:
         optional: true
 
-  vuedraggable@2.24.3:
-    resolution: {integrity: sha512-6/HDXi92GzB+Hcs9fC6PAAozK1RLt1ewPTLjK0anTYguXLAeySDmcnqE8IC0xa7shvSzRjQXq3/+dsZ7ETGF3g==}
+  vuedraggable@4.1.0:
+    resolution: {integrity: sha512-FU5HCWBmsf20GpP3eudURW3WdWTKIbEIQxh9/8GE806hydR9qZqRRxRE3RjqX7PkuLuMQG/A7n3cfj9rCEchww==}
+    peerDependencies:
+      vue: ^3.0.1
 
   vueuc@0.4.64:
     resolution: {integrity: sha512-wlJQj7fIwKK2pOEoOq4Aro8JdPOGpX8aWQhV8YkTW9OgWD2uj2O8ANzvSsIGjx7LTOc7QbS7sXdxHi6XvRnHPA==}
@@ -5995,8 +5993,6 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.3
 
-  '@babel/helper-plugin-utils@7.25.9': {}
-
   '@babel/helper-plugin-utils@7.26.5': {}
 
   '@babel/helper-replace-supers@7.26.5(@babel/core@7.26.0)':
@@ -6037,82 +6033,82 @@ snapshots:
   '@babel/plugin-syntax-async-generators@7.8.4(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-bigint@7.8.3(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-class-static-block@7.14.5(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-import-attributes@7.26.0(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-import-meta@7.10.4(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-json-strings@7.8.3(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-jsx@7.25.9(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-logical-assignment-operators@7.10.4(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-numeric-separator@7.10.4(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-private-property-in-object@7.14.5(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-top-level-await@7.14.5(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-typescript@7.25.9(@babel/core@7.26.0)':
     dependencies:
@@ -6475,7 +6471,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.7.2)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.7.2))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.7.2))(typescript@5.7.2)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.7.2))(ts-node@10.9.2(@types/node@18.19.70)(typescript@5.7.2))(typescript@5.7.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -8051,7 +8047,7 @@ snapshots:
   '@vue/babel-plugin-jsx@1.2.5(@babel/core@7.26.0)':
     dependencies:
       '@babel/helper-module-imports': 7.25.9
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
       '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
       '@babel/template': 7.25.9
       '@babel/traverse': 7.26.4
@@ -8070,7 +8066,7 @@ snapshots:
       '@babel/code-frame': 7.26.2
       '@babel/core': 7.26.0
       '@babel/helper-module-imports': 7.25.9
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
       '@babel/parser': 7.26.3
       '@vue/compiler-sfc': 3.5.13
     transitivePeerDependencies:
@@ -8429,7 +8425,7 @@ snapshots:
 
   babel-plugin-istanbul@6.1.1:
     dependencies:
-      '@babel/helper-plugin-utils': 7.25.9
+      '@babel/helper-plugin-utils': 7.26.5
       '@istanbuljs/load-nyc-config': 1.1.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-instrument: 5.2.1
@@ -8820,7 +8816,7 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.7.2))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.7.2))(typescript@5.7.2):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.7.2))(ts-node@10.9.2(@types/node@18.19.70)(typescript@5.7.2))(typescript@5.7.2):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@5.7.2)
@@ -11489,7 +11485,7 @@ snapshots:
       seroval: 1.2.0
       seroval-plugins: 1.2.0(seroval@1.2.0)
 
-  sortablejs@1.10.2: {}
+  sortablejs@1.14.0: {}
 
   source-map-js@1.2.1: {}
 
@@ -12143,9 +12139,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
-  vuedraggable@2.24.3:
+  vuedraggable@4.1.0(vue@3.5.13(typescript@5.6.3)):
     dependencies:
-      sortablejs: 1.10.2
+      sortablejs: 1.14.0
+      vue: 3.5.13(typescript@5.6.3)
 
   vueuc@0.4.64(vue@3.5.13(typescript@5.6.3)):
     dependencies:
