@@ -5,6 +5,9 @@ import { RouteNames } from './const';
 import Task from '@/components/Task/index.vue';
 import Login from '@/components/Login/index.vue';
 import { SettingsRoute } from './settings';
+import { startLoading, finishLoading } from '@/composables/notice/loading';
+import { messageRedirectToSignIn } from '@/composables/notice/message';
+import { checkHaveToken } from '@/utils/token';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -33,15 +36,19 @@ export const routes: RouteRecordRaw[] = [
 
 export function setupRouterGuard(router: Router) {
   router.beforeEach(() => {
-    // todo start loading
+    startLoading();
   });
   router.afterEach(() => {
-    // todo end loading
+    finishLoading();
   });
 
   router.beforeEach((to, from, next) => {
-    // todo check user
-    next();
+    if (to.matched.some((r) => r.meta.requiresAuth)) {
+      if (checkHaveToken()) next();
+      else messageRedirectToSignIn(() => next({ name: RouteNames.LOGIN }));
+    } else {
+      next();
+    }
   });
 }
 
