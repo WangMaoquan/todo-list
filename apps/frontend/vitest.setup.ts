@@ -1,4 +1,4 @@
-// import 'fake-indexeddb/auto';
+import 'fake-indexeddb/auto'; // 提供indexdb
 import { config } from '@vue/test-utils';
 import {
   VueRouterMock,
