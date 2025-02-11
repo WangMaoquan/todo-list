@@ -1,12 +1,6 @@
 import { useGoto } from '../../goto';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
-import {
-  createRouterMock,
-  injectRouterMock,
-  VueRouterMock,
-} from 'vue-router-mock';
-import { config, mount } from '@vue/test-utils';
-import { defineComponent } from 'vue';
+import { describe, expect, it } from 'vitest';
+import { useSetup } from '@/helpers';
 
 // mock router 这一块都可以提取到 setup 里面
 // 创建
@@ -27,33 +21,30 @@ describe('use vue-router-mock', () => {
   // });
 
   it('gotoHome', () => {
-    const comp = defineComponent({
-      setup() {
-        const { gotoHome } = useGoto();
+    // const comp = defineComponent({
+    //   setup() {
+    //     const { gotoHome } = useGoto();
 
-        gotoHome();
-      },
-      template: '<div></div>',
+    //     gotoHome();
+    //   },
+    //   template: '<div></div>',
+    // });
+    const wrapper = useSetup(() => {
+      const { gotoHome } = useGoto();
+
+      gotoHome();
     });
-
-    const wrapper = mount(comp);
-    // console.log(wrapper.router);
     expect(wrapper.router.push).toBeCalledWith({
       name: 'Home',
     });
   });
 
   it('gotoSettings', () => {
-    const comp = defineComponent({
-      setup() {
-        const { gotoSettings } = useGoto();
+    const wrapper = useSetup(() => {
+      const { gotoSettings } = useGoto();
 
-        gotoSettings();
-      },
-      template: '<div></div>',
+      gotoSettings();
     });
-
-    const wrapper = mount(comp);
     expect(wrapper.router.push).toBeCalledWith({
       // name: 'Home', // 没有清除缓存 也会通过
       name: 'Settings',
@@ -61,16 +52,11 @@ describe('use vue-router-mock', () => {
   });
 
   it('gotoSettingsTheme', () => {
-    const comp = defineComponent({
-      setup() {
-        const { gotoSettingsTheme } = useGoto();
+    const wrapper = useSetup(() => {
+      const { gotoSettingsTheme } = useGoto();
 
-        gotoSettingsTheme();
-      },
-      template: '<div></div>',
+      gotoSettingsTheme();
     });
-
-    const wrapper = mount(comp);
     expect(wrapper.router.push).toBeCalledWith({
       name: 'SettingsTheme',
     });
