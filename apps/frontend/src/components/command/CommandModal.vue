@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NModal } from 'naive-ui';
 import { watch } from 'vue';
-import { useSearch, useCommandModal } from '@/composables/commamd';
+import { useSearch, useCommandModal } from '@/composables/command';
 import CommandBody from './CommandModalBody.vue';
 
 const { resetSearch } = useSearch();

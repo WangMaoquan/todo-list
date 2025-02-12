@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NCheckbox, NEllipsis } from 'naive-ui';
-import { useCommandModal } from '@/composables/commamd';
+import { useCommandModal } from '@/composables/command';
 import type { TasksSelector } from '@/store/useTasksSelectorStore';
 import { useTasksSelectorStore } from '@/store/useTasksSelectorStore';
 import { useTasksStore } from '@/store/useTasksStore';

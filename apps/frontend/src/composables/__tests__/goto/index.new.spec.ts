@@ -1,5 +1,5 @@
-import { useGoto } from '../../goto';
-import { describe, expect, it } from 'vitest';
+import { useGoto, openGithub, GITHUB_URL } from '../../goto';
+import { describe, expect, it, vi } from 'vitest';
 import { useSetup } from '@/helpers';
 
 // mock router 这一块都可以提取到 setup 里面
@@ -59,6 +59,17 @@ describe('use vue-router-mock', () => {
     });
     expect(wrapper.router.push).toBeCalledWith({
       name: 'SettingsTheme',
+    });
+  });
+
+  describe('window.open', () => {
+    it('openGithub', () => {
+      const openFn = (window.open = vi.fn());
+
+      openGithub();
+
+      expect(openFn).toBeCalled();
+      expect(openFn).toBeCalledWith(GITHUB_URL);
     });
   });
 });

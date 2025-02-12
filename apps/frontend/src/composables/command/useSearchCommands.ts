@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js';
 import { ref } from 'vue';
-import type { Command } from './';
-import { useCommand } from './';
+import type { Command } from '.';
+import { useCommand } from '.';
 
 const filteredCommands = ref<Command[]>([]);
 const fuse = new Fuse([] as Command[], {

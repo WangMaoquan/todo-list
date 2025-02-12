@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useSearchCommands, useCommandModal } from '@/composables/commamd';
-import type { Command } from '@/composables/commamd';
+import { useSearchCommands, useCommandModal } from '@/composables/command';
+import type { Command } from '@/composables/command';
 
 const { closeCommandModal } = useCommandModal();
 const { filteredCommands } = useSearchCommands();

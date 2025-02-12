@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NEmpty, NInput } from 'naive-ui';
 import { Icon } from '@iconify/vue';
-import { useSearch } from '@/composables/commamd';
+import { useSearch } from '@/composables/command';
 import CommandSearchCommands from './CommandSearchCommands.vue';
 import CommandSearchTasks from './CommandSearchTasks.vue';
 
