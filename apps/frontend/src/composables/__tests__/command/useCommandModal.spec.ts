@@ -13,7 +13,7 @@ import * as useIsMac from '../../useIsMac';
 //   };
 // });
 
-describe('command', () => {
+describe('useCommandModal', () => {
   beforeEach(() => {
     const { closeCommandModal } = useCommandModal();
     // 需要重置 showCommandModal 状态
