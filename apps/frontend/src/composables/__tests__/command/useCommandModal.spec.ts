@@ -1,4 +1,4 @@
-import { fireEvents, useSetup } from '@/helpers';
+import { fireEvents, useSetup } from '@/tests/helpers';
 import { useCommandModal } from '../../command';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { computed } from 'vue';

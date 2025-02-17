@@ -1,6 +1,6 @@
 import { useGoto, openGithub, GITHUB_URL } from '../../goto';
 import { describe, expect, it, vi } from 'vitest';
-import { useSetup } from '@/helpers';
+import { useSetup } from '@/tests/helpers';
 
 // mock router 这一块都可以提取到 setup 里面
 // 创建
