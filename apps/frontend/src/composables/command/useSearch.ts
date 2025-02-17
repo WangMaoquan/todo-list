@@ -2,6 +2,7 @@ import { watchDebounced } from '@vueuse/core';
 import { computed, ref, watch } from 'vue';
 import { useSearchCommands } from './useSearchCommands';
 import { useSearchTasks } from './useSearchTasks';
+import { delay } from '@/utils';
 
 const search = ref('');
 const loading = ref(false);
@@ -55,8 +56,10 @@ export function useSearch() {
 
   async function handleSearch(input: string) {
     if (isSearchCommand.value) {
+      console.log(1);
       searchCommands(input.trimEnd().slice(1));
     } else {
+      await delay();
       await searchTasks(input);
     }
   }
