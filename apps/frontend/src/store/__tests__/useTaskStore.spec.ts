@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { useTasksStore } from '../useTasksStore';
-import { fetchCreateTask } from '@/api';
+import { fetchCreateTask, fetchRemoveTask } from '@/api';
 import { project } from '@/tests/fixture';
 import { createPinia, setActivePinia } from 'pinia';
 import { useTasksSelectorStore } from '../useTasksSelectorStore';
@@ -27,6 +27,10 @@ describe('useTaskStore', () => {
     setActivePinia(createPinia());
 
     vi.clearAllMocks();
+
+    const tasksSelectorStore = useTasksSelectorStore();
+
+    tasksSelectorStore.currentSelector = project;
   });
 
   describe('add task', () => {
@@ -40,10 +44,6 @@ describe('useTaskStore', () => {
      * 添加进taskStore.tasks 的第一个位置
      */
     it('should add task to the first position', async () => {
-      const tasksSelectorStore = useTasksSelectorStore();
-
-      tasksSelectorStore.currentSelector = project;
-
       const taskStore = useTasksStore();
 
       await taskStore.addTask('吃饭');
@@ -83,5 +83,17 @@ describe('useTaskStore', () => {
       // 这里记得清楚 mock 缓存
       expect(fetchCreateTask).not.toBeCalled();
     });
+  });
+
+  it('should remove task', async () => {
+    const taskStore = useTasksStore();
+
+    const task = await taskStore.addTask('做作业');
+
+    await taskStore.removeTask(task!);
+
+    expect(fetchRemoveTask).toBeCalledWith(task?.id);
+    expect(taskStore.tasks.length).toBe(0);
+    expect(taskStore.currentActiveTask).toBeUndefined();
   });
 });
